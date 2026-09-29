@@ -1,0 +1,26 @@
+TOPIC: Neural Networks
+A neural network is a series of layers of nodes (neurons) inspired by the human brain. Each neuron takes inputs, applies weights, adds a bias, then passes through an activation function. Networks learn by adjusting weights using backpropagation and gradient descent. Deep neural networks have many hidden layers and can learn complex patterns.
+
+TOPIC: Activation Functions
+Activation functions introduce non-linearity into neural networks. ReLU (Rectified Linear Unit) returns max(0, x) — most commonly used in hidden layers because it avoids vanishing gradients. Sigmoid squashes output to 0-1 — used in binary classification output layers. Softmax converts outputs to probabilities summing to 1 — used in multiclass classification.
+
+TOPIC: Backpropagation
+Backpropagation is the algorithm used to train neural networks. It calculates the gradient of the loss function with respect to each weight by applying the chain rule of calculus from output layer back to input layer. These gradients tell the optimizer which direction to adjust weights to reduce error. Runs after every forward pass.
+
+TOPIC: Convolutional Neural Networks (CNN)
+CNNs are designed for processing grid-like data such as images. They use convolutional layers that apply learnable filters to detect features like edges, textures, and shapes. Pooling layers reduce spatial dimensions. CNNs are translation-invariant — they can detect a feature regardless of where it appears. Used in image classification, object detection, and medical imaging.
+
+TOPIC: Recurrent Neural Networks (RNN)
+RNNs process sequential data by maintaining a hidden state that carries information from previous time steps. Used for time series, text, and speech. Vanilla RNNs suffer from vanishing gradients over long sequences. LSTM (Long Short-Term Memory) and GRU (Gated Recurrent Unit) solve this by using gating mechanisms to control information flow.
+
+TOPIC: Dropout
+Dropout is a regularization technique for neural networks. During training, randomly selected neurons are ignored (dropped out) with probability p. This prevents co-adaptation of neurons and forces the network to learn redundant representations. At inference time, all neurons are used but weights are scaled. Typical dropout rates: 0.2 to 0.5.
+
+TOPIC: Batch Normalization
+Batch normalization normalizes the inputs of each layer to have zero mean and unit variance across the batch. This speeds up training, allows higher learning rates, and acts as regularization. Applied before or after the activation function. Reduces sensitivity to weight initialization and helps with vanishing/exploding gradients.
+
+TOPIC: Transfer Learning
+Transfer learning uses a model pre-trained on a large dataset (like ImageNet) as the starting point for a new task. The pre-trained weights capture general features. You either fine-tune all layers or freeze early layers and only train the final layers. Dramatically reduces data and compute needed for new tasks. Examples: using ResNet for medical imaging.
+
+TOPIC: Transformers
+Transformers use self-attention mechanisms to process sequences in parallel rather than sequentially like RNNs. The attention mechanism allows each token to look at all other tokens. Used in NLP (BERT, GPT), vision (ViT), and multimodal models. Self-attention computes query, key, value matrices and scores relationships between all positions simultaneously.

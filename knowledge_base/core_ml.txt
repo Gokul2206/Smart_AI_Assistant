@@ -1,0 +1,23 @@
+TOPIC: Supervised Learning
+Supervised learning is a type of machine learning where the model learns from labeled training data. Each training example has an input and a known correct output. The model learns to map inputs to outputs and can then predict outputs for new unseen inputs. Examples include classification (spam detection) and regression (house price prediction).
+
+TOPIC: Unsupervised Learning
+Unsupervised learning finds patterns in data without labeled responses. The model discovers hidden structure on its own. Common techniques include clustering (K-Means, DBSCAN) and dimensionality reduction (PCA, t-SNE). Used when labeled data is expensive or unavailable.
+
+TOPIC: Overfitting and Underfitting
+Overfitting occurs when a model learns the training data too well, including noise, and performs poorly on new data. Signs: high training accuracy, low test accuracy. Fix: add more data, use dropout, regularization (L1/L2), or simplify the model. Underfitting occurs when the model is too simple to capture patterns. Fix: use a more complex model or add more features.
+
+TOPIC: Bias-Variance Tradeoff
+Bias is the error from wrong assumptions in the model — high bias means underfitting. Variance is the error from sensitivity to small training data fluctuations — high variance means overfitting. The goal is to find the sweet spot: low bias and low variance. Ensemble methods like Random Forest help balance this tradeoff.
+
+TOPIC: Cross Validation
+Cross validation is a technique to evaluate model performance reliably. In k-fold cross validation, data is split into k equal parts. The model trains on k-1 parts and tests on 1 part, repeated k times. The final score is the average across all folds. Prevents overfitting to a single train-test split.
+
+TOPIC: Regularization
+Regularization adds a penalty to the model's loss function to reduce overfitting. L1 regularization (Lasso) adds the absolute value of weights — can zero out irrelevant features. L2 regularization (Ridge) adds squared weights — shrinks all weights but keeps all features. Both prevent model from becoming too complex.
+
+TOPIC: Feature Engineering
+Feature engineering is the process of using domain knowledge to create, transform, or select input features that improve model performance. Includes normalization, encoding categorical variables, handling missing values, and creating interaction features. Often more impactful than choosing a complex model.
+
+TOPIC: Train Test Split
+Data is split into training set (used to train the model), validation set (used to tune hyperparameters), and test set (used only for final evaluation). A common split is 70% train, 15% validation, 15% test. Never use test data during training — it must remain unseen to give honest performance estimate.

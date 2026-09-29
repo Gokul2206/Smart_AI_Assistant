@@ -1,0 +1,23 @@
+TOPIC: Tokenization
+Tokenization is the process of splitting text into smaller units called tokens. Word tokenization splits on spaces and punctuation. Subword tokenization (BPE, WordPiece) splits words into subword units, handling unknown words better. Character tokenization splits into individual characters. Modern LLMs use subword tokenization to balance vocabulary size and coverage.
+
+TOPIC: Word Embeddings
+Word embeddings represent words as dense vectors in a continuous vector space. Similar words have similar vectors. Word2Vec learns embeddings by predicting surrounding words (CBOW) or predicting a word from context (Skip-gram). GloVe uses global word co-occurrence statistics. These pre-trained embeddings can be used as features in downstream NLP tasks.
+
+TOPIC: TF-IDF
+TF-IDF (Term Frequency-Inverse Document Frequency) measures how important a word is to a document in a collection. TF counts how often a word appears in a document. IDF penalizes words that appear in many documents (like "the"). TF-IDF = TF × IDF. Used in search engines, document classification, and keyword extraction.
+
+TOPIC: Sentiment Analysis
+Sentiment analysis classifies text as positive, negative, or neutral. Can be rule-based (using sentiment lexicons) or model-based (trained classifiers or fine-tuned LLMs). Aspect-based sentiment analysis identifies sentiment toward specific aspects. Applications: product reviews, social media monitoring, customer feedback analysis.
+
+TOPIC: Named Entity Recognition (NER)
+NER identifies and classifies named entities in text into categories like person, organization, location, date, and product. Uses sequence labeling with BIO tagging (Beginning, Inside, Outside). Modern NER uses transformer-based models fine-tuned on labeled corpora. Critical for information extraction pipelines.
+
+TOPIC: BERT
+BERT (Bidirectional Encoder Representations from Transformers) is a pre-trained language model that reads text bidirectionally. Pre-trained on masked language modeling (predict masked tokens) and next sentence prediction. Fine-tuned on downstream tasks with a classification head. Produces rich contextual embeddings where the same word gets different vectors in different contexts.
+
+TOPIC: RAG (Retrieval Augmented Generation)
+RAG combines a retrieval system with a generative model. Instead of relying only on the model's training knowledge, RAG retrieves relevant documents from an external knowledge base and provides them as context to the LLM. Steps: embed query, search vector database, retrieve top-k chunks, pass chunks + query to LLM. Reduces hallucination and keeps knowledge current.
+
+TOPIC: Prompt Engineering
+Prompt engineering is the practice of designing inputs to LLMs to get desired outputs. Techniques include zero-shot (direct instruction), few-shot (examples in prompt), chain-of-thought (ask model to reason step by step), and system prompts (set model role and behavior). Good prompts are specific, provide context, and define expected output format clearly.
